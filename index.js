@@ -13,7 +13,10 @@ mongoose.connect(process.env.MONGO_URL)
 .then(()=>console.log("MongoDB connected Successfully"))
 .catch((error)=>console.log(error))
 
-const port=5000
+const port= process.env.port || 5000
+app.use("/",(req,res)=>{
+    res.send("<h1>Welcome to dummy staffing website")
+})
 
 app.listen(port,()=>{
     console.log(`server running at port ${port}`)

@@ -6,3 +6,4 @@ router.post('/add', addVendor);
 router.get("/all",getVendors)
 
 module.exports = router;
+

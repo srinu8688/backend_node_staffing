@@ -10,8 +10,8 @@ const resourceSchema = new mongoose.Schema({
     required: false
 },
   vendor: { 
-    type: mongoose.Schema.Types.ObjectId, 
-    ref: 'Vendor', required: true 
+    type: String,
+    required: true 
 },
   technology: {
     type: [{

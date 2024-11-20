@@ -4,8 +4,11 @@ const dotEnv=require("dotenv")
 const bodyParser = require('body-parser');
 const vendorRoutes = require('./routes/vendorRoutes');
 const resourceRoutes = require('./routes/resourceRoutes');
+const cors=require("cors");
+
 const app=express()
 dotEnv.config()
+app.use(cors())
 app.use(bodyParser.json());
 app.use('/vendors', vendorRoutes);
 app.use('/resources', resourceRoutes);
